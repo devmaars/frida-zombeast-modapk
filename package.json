@@ -1,0 +1,19 @@
+{
+  "name": "frida-zombeast-modapk",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "frida-compile src/index.ts -o dist/agent.js -w",
+    "build": "frida-compile src/index.ts -o dist/agent.js -c",
+    "spawn": "frida -U -f com.akpublish.zombie -l dist/agent.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "frida-compile": "^16.4.1",
+    "frida-il2cpp-bridge": "^0.9.0",
+    "typescript": "^5.4.2"
+  }
+}
